@@ -4,13 +4,13 @@ import { NavMenus } from "./NavMenus";
 import "./header.css";
 
 function Header() {
-  const [modalContent, setModalContent] = useState<string | null>(null);
+  const [openModalContent, setOpenModalContent] = useState<string | null>(null);
   const [mobileNavListOpenIndex, setMobileNavListOpenIndex] = useState<
     number | null
   >(null);
 
   const handleOpenModal = (modalName: string | null) => {
-    setModalContent(modalName);
+    setOpenModalContent(modalName);
   };
   const handleMobileSubMenuOpen = (i: number) => {
     setMobileNavListOpenIndex(mobileNavListOpenIndex === i ? null : i);
@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <>
-      {modalContent && (
+      {openModalContent && (
         <div className="modal-overlay" onClick={() => handleOpenModal(null)} />
       )}
       <div className="top-menu"></div>
@@ -41,7 +41,9 @@ function Header() {
           />
         </div>
         <nav
-          className={(modalContent === "leftNav" ? "nav-show" : "") + " flex"}
+          className={
+            (openModalContent === "leftNav" ? "nav-show" : "") + " flex"
+          }
         >
           <div className="nav-close">
             <BiX onClick={() => handleOpenModal(null)} />
