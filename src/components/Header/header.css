@@ -1,0 +1,108 @@
+/* 상단 */
+.top-menu{
+    height: 35px;
+    width: 100dvw;
+    background-color: gray;
+}
+header {
+    background-color: black;
+    height: 65px;
+    align-items: center;
+    justify-content: space-between;
+}
+a {
+    color: black;
+}
+@media (max-width: 1200px) {
+    .modal-overlay{
+        width: 100dvw;
+        height: 100dvh;
+        background-color: hsla(0, 0%, 0%, 0.5);
+        position: fixed;
+        z-index: 10;
+    }
+    .top-menu{
+        display: none;
+    }
+    header{
+        height: 60px;
+    }
+    .logo {
+        width: 6rem;
+    }
+    .header-icon {
+        height: 100%;
+        padding: 0 .3em;
+        font-size: 1.8em;
+    }
+    nav{
+        width: 370px;
+        height: 100dvh;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        background-image: url('https://s1.pearlcdn.com/KR/contents/img/common/header_mob_nav.png');
+        background-position: center;
+        transform: translateX(-370px);
+        transition: all .5s;
+    }
+    .nav-show{
+        transform: translateX(0px);
+    }
+    .nav-close{
+        width: 100%;
+        font-size: 3rem;
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+    nav .logo {
+        width: 150px;
+        padding: 3.3em 0;
+    }
+    .nav-list-head {
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 2em;
+        border-top: 1px solid hsla(0, 0%, 0%, 0.3);
+    }
+    .nav-list-head-arrow {
+        font-size: 1.5rem;
+        transition: all .5s;
+    }
+    .nav-list-sub {
+        background-color: black;
+        font-size: .9rem;
+        overflow: hidden;
+        transition: all .3s;
+        max-height: 0px;
+    }
+    .mobile-nav-open .nav-list-head-arrow{
+        rotate: 180deg;
+    }
+    .mobile-nav-open + .nav-list-sub{
+        padding: .3em 0 .6em;
+        max-height: 600px;
+    }
+    .nav-list-sub > li{
+        color: gray;
+        padding: .9em 2em;
+    }
+    .nav-buttons{
+        width: 80%;
+        margin-top: 3rem;
+    }
+    .login{
+        width: 100%;
+        padding: 1.2em 0;
+        background-color: var(--color-brown);
+        margin-bottom: 1rem;
+    }
+    .game-start {
+        background-image: url('https://s1.pearlcdn.com/KR/contents/img/common/header_btn_acoin_mob.png');
+        width: 100%;
+        padding: 1.2em 0;
+    }
+}

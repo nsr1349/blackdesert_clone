@@ -1,0 +1,38 @@
+.text-white {
+    color: white
+}
+.text-gray {
+    color: gray
+}
+.text-black {
+    color: black
+}
+.text-white {
+    color: white
+}
+.h-full {
+    height: 100%;
+}
+.w-full {
+    width: 100%;
+}
+.flex {
+    display: flex;
+}
+
+.hover-before-slide{
+    position: relative;
+}
+.hover-before-slide::before{
+    content: "";
+    background-color: hsla(0, 0%, 100%, .1 );
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.hover-before-slide:hover::before{
+    width: 100%;
+}
