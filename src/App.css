@@ -36,3 +36,13 @@
 .hover-before-slide:hover::before{
     width: 100%;
 }
+@media (min-width: 1201px) {
+    .pc-hide {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .mobile-hide {
+        display: none;
+    }
+}

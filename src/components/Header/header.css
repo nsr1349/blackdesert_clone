@@ -69,12 +69,12 @@ nav{
     font-size: large;
     padding: 1.2em 0;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     header {
         height: 75px;
     }
 }
-@media (min-width: 601px) {
+@media (min-width: 1201px) {
     .nav-list {
         height: 100%;
         display: flex;
@@ -99,9 +99,6 @@ nav{
         padding: 1em 2em;
         white-space: nowrap;
     }
-    .pc-hide {
-        display: none;
-    }
     .nav-list-head:hover > a::before, 
     .nav-list-head:hover > a::after {
         width: 50%;
@@ -111,10 +108,7 @@ nav{
         max-height: 600px;
     }
 }
-@media (max-width: 600px) {
-    .mobile-hide {
-        display: none;
-    }
+@media (max-width: 1200px) {
     .modal-overlay{
         width: 100dvw;
         height: 100dvh;

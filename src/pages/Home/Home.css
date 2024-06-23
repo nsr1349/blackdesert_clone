@@ -1,0 +1,55 @@
+.main-video {
+    height: 850px;
+    width: 100%;
+    background-image: url("https://s1.pearlcdn.com/KR/Upload/BANNER/MAIN/bannerImage_20240527180631koKR.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+.main-video-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    position: absolute;
+}
+.main-video-overlay > h1 {
+    position: absolute;
+    bottom: 13rem;
+    font-size: 4.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+}
+.main-video-overlay > button {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    font-size: 1.5rem;
+    transform: translate(-50%, 0);
+    padding: 1em 4em;
+    color: black;
+    background-color: var(--color-light-gold);
+}
+@media (max-width: 1200px) {
+    .main-video {
+        height: 450px;
+        width: 100%;
+    }
+    .main-video-overlay {
+        background-color: hsla(0, 0%, 0%, 0);
+    }
+    .main-video-overlay > h1 {
+        font-size: 2rem;
+        bottom: 8rem;
+    }
+    .main-video-overlay > button {
+        font-size: 1rem;
+        bottom: 3rem;
+    }
+}
