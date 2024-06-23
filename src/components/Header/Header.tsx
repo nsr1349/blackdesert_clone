@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BiUser, BiSearch, BiMenu, BiX, BiChevronDown } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import { NavMenus } from "./NavMenus";
 import "./header.css";
 
@@ -21,23 +22,60 @@ function Header() {
       {openModalContent && (
         <div className="modal-overlay" onClick={() => handleOpenModal(null)} />
       )}
+      {/* dd */}
+      {openModalContent === "rightBar" && (
+        <div className="rightBar">
+          <BiX
+            onClick={() => handleOpenModal(null)}
+            className="close-rightBar"
+          />
+          <div className="rightBar-top-img-box">
+            <img
+              src="https://s1.pearlcdn.com/KR/contents/img/common/cm_bi_black.svg"
+              alt=""
+            />
+          </div>
+          <div className="rightBar-login-box">
+            <button className="rightBar-login-btn">로그인</button>
+            <div>
+              <img src="" alt="" />
+              <span>펄어비스 ID 생성</span>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <span>게임</span>
+              <ul>
+                <li>검은사막</li>
+              </ul>
+            </li>
+            <li>
+              <span>뉴스</span>
+            </li>
+            <li>
+              <span>스토어</span>
+            </li>
+          </ul>
+          <span>Copyright © Pearl Abyss Corp. All Rights Reserved.</span>
+        </div>
+      )}
       <div className="top-menu"></div>
       <header className="text-white flex">
         <BiMenu
-          className="header-icon"
+          className="header-icon pc-hide"
           onClick={() => handleOpenModal("leftNav")}
         />
-        <a href="/valid-path" className="logo">
+        <a href="/valid-path" className="logo pc-hide">
           <img
             src="https://s1.pearlcdn.com/KR/contents/img/common/logo_bdo_kr.svg?v=1"
             alt="dd"
           />
         </a>
-        <div className="h-full">
+        <div className="h-full pc-hide">
           <BiSearch className="header-icon" />
           <BiUser
-            className="header-icon"
-            onClick={() => handleOpenModal("rightNav")}
+            className="header-icon "
+            onClick={() => handleOpenModal("rightBar")}
           />
         </div>
         <nav
@@ -45,7 +83,7 @@ function Header() {
             (openModalContent === "leftNav" ? "nav-show" : "") + " flex"
           }
         >
-          <div className="nav-close">
+          <div className="nav-close pc-hide">
             <BiX onClick={() => handleOpenModal(null)} />
           </div>
           <img
@@ -61,12 +99,10 @@ function Header() {
                     (mobileNavListOpenIndex === i ? "mobile-nav-open" : "") +
                     " nav-list-head flex"
                   }
+                  onClick={() => handleMobileSubMenuOpen(i)}
                 >
-                  <a href={link}>{title}</a>
-                  <BiChevronDown
-                    className="nav-list-head-arrow"
-                    onClick={() => handleMobileSubMenuOpen(i)}
-                  />
+                  <Link to={link}> {title}</Link>
+                  <BiChevronDown className="nav-list-head-arrow pc-hide" />
                 </div>
                 <ul className="nav-list-sub">
                   {subMenu.map(({ title, link }) => (
@@ -81,7 +117,9 @@ function Header() {
             ))}
           </ul>
           <div className="nav-buttons">
-            <button className="login">로그인</button>
+            <BiSearch className="header-icon mobile-hide" />
+            <BiUser className="header-icon mobile-hide" />
+            <button className="login pc-hide">로그인</button>
             <button className="game-start hover-before-slide">게임 시작</button>
           </div>
         </nav>

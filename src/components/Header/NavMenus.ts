@@ -5,7 +5,7 @@ export const NavMenus = [
     subMenu: [
       {
         title: "공지사항",
-        link: "/",
+        link: "/gay",
       },
       {
         title: "업데이트",

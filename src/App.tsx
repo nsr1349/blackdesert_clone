@@ -1,11 +1,18 @@
 import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Gay from "./components/pages/Gay";
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header></Header>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gay" element={<Gay />} />
+      </Routes>
+    </Router>
   );
 }
 
