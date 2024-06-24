@@ -20,6 +20,7 @@ header {
 nav{
     width: 100%;
     height: 100%;
+
 }
 .nav-list-head > a {
     height: 100%;
@@ -195,10 +196,12 @@ nav{
         background-image: url('https://s1.pearlcdn.com/KR/contents/img/common/header_mob_nav.png');
         background-position: center;
         transform: translateX(-370px);
-        transition: all .5s;
+        opacity: 0;
     }
     .nav-show{
         transform: translateX(0px);
+        opacity: 1;
+        transition: all .5s;
     }
     .nav-close{
         width: 100%;
