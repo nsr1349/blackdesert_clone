@@ -54,7 +54,15 @@ button{
   color: white;
   white-space: nowrap;
 }
-  
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
 
 :root {
   --color-dark-gold : #9C7C4E;
