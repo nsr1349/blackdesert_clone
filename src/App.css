@@ -1,59 +1,83 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* 핵심 body의 기본값을 설정합니다. */
 body {
-	line-height: 1;
+  min-height: 100vh;
+  line-height: 1.5;
 }
-ol, ul {
-	list-style: none;
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
-a {
-  text-decoration: none;
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
-a:visited, a:active {
-  color: white;
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
-blockquote, q {
-	quotes: none;
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+textarea:not([rows]) {
+  min-height: 10em;
 }
-button {
-    -webkit-appearance: none;
-    border-radius: 0;
-    text-align: inherit;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    cursor: pointer;
-    border: none;
-    color: inherit;
-    font: inherit;
+
+:target {
+  scroll-margin-block: 5ex;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -63,11 +87,13 @@ img {
   background-size: cover;
   shape-margin: 1rem;
 }
+
 :root {
   --color-dark-gold : #9C7C4E;
   --color-light-gold : #DCB15C;
   --color-brown : #2c2823;
 }
+
 
 /* 던파 폰트 */
 @font-face{
@@ -104,10 +130,8 @@ img {
 body, button{
   font-family: 'DNFForgedBlade', sans-serif;
 }
- */
 
-
-
+/* 종종 쓸거 */
 .text-white {
     color: white
 }
@@ -126,33 +150,18 @@ body, button{
 .w-full {
     width: 100%;
 }
+.full {
+    height: 100%;
+    width: 100%;
+}
 .flex {
     display: flex;
 }
-
-.hover-before-slide{
-    position: relative;
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.hover-before-slide::before{
-    content: "";
-    background-color: hsla(0, 0%, 100%, .1 );
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: all 0.5s;
-}
-.hover-before-slide:hover::before{
-    width: 100%;
-}
-@media (min-width: 1201px) {
-    .pc-hide {
-        display: none;
-    }
-}
-@media (max-width: 1200px) {
-    .mobile-hide {
-        display: none;
-    }
+.red{
+  color: red;
 }
