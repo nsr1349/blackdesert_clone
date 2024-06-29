@@ -1,0 +1,72 @@
+#video-section {
+    width: 100%;
+    min-height: 460px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("https://s1.pearlcdn.com/KR/Upload/BANNER/MAIN/bannerImage_20240625144430koKR.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: red;
+    @media (min-width: 1024px) {
+        min-height: 830px;
+    }
+    > video {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    > div {
+        text-align: center;
+        color: white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 9%;
+        > h1 {
+            font-size: 4.5em;
+            white-space: nowrap;
+            @media (max-width: 1024px) {
+                font-size: 2.3em;
+                font-weight: 500;
+            }
+        }
+        > h4 {
+            font-size: 1.6em;
+            margin: 0.5em 0 1.5em;
+            font-weight: 300;
+            @media (max-width: 1024px) {
+                font-size: .9em;
+                
+                margin: .7em 0 1.5em;
+            }
+        }
+        > button {
+            background-color: var(--color-light-gold);
+            color: rgb(56, 29, 29);
+            font-size: 1.2em;
+            padding: 1.2em 5em;
+            @media (max-width: 1024px) {
+                font-size: .9em;
+                padding: .9em 5.4em;
+            }
+        }
+    }
+}
+
+#news-section{
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    margin: 30px;
+    text-align: center;
+    > article{
+        & img {
+            border-radius: 10px;
+        }
+        & h4 {
+            padding: .5em 0;
+        }
+    }
+}

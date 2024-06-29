@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -31,7 +32,8 @@ ol[role='list'] {
 
 /* 핵심 body의 기본값을 설정합니다. */
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 3000px;
   line-height: 1.5;
 }
 
@@ -88,6 +90,10 @@ img {
   shape-margin: 1rem;
 }
 
+button {
+  border: none;
+}
+
 :root {
   --color-dark-gold : #9C7C4E;
   --color-light-gold : #DCB15C;
@@ -124,7 +130,7 @@ img {
 }
 .main-font-bold {
   font-family: 'DNFForgedBlade', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 body, button{
@@ -132,33 +138,33 @@ body, button{
 }
 
 /* 종종 쓸거 */
-.text-white {
-    color: white
-}
-.text-gray {
-    color: gray
-}
-.text-black {
-    color: black
-}
-.text-white {
-    color: white
-}
-.h-full {
-    height: 100%;
-}
-.w-full {
-    width: 100%;
-}
-.full {
-    height: 100%;
-    width: 100%;
-}
-.flex {
-    display: flex;
-}
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 568px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  .mobile-show {
+    display: block !important;
+  }
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .tablet-hide {
+    display: none !important;
+  }
+  .tablet-show {
+    display: block !important;
+  }
+}
+@media (min-width: 1024px) {
+  .pc-hide {
+    display: none !important;
+  }
+  .pc-show {
+    display: block !important;
+  }
 }

@@ -3,10 +3,8 @@ import "./Header.css";
 function Header() {
   return (
     <>
-      <header>
-        <div className="first-nav"></div>
-        <div className="second-nav"></div>
-      </header>
+      <header className="first-nav tablet-hide"></header>
+      <header className="second-nav"></header>
     </>
   );
 }
