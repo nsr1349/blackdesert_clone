@@ -21,11 +21,20 @@ function Home() {
         {homeNews.map(({ id, image, title }) => (
           <article key={id}>
             <a href={id}>
-              <img src={image} alt={title} />
+              <div style={{ backgroundImage: `url('${image}')` }} />
               <h4>{title}</h4>
             </a>
           </article>
         ))}
+      </section>
+      <section id="new-class-section">
+        <div className="section-wrap">
+          <img
+            src="https://s1.pearlcdn.com/KR/contents_event/floating/202406/main_new_char/character_dosa_767.png"
+            alt="신규 클래스 배너"
+          />
+          <div></div>
+        </div>
       </section>
     </>
   );
