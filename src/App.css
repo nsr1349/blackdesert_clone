@@ -92,6 +92,7 @@ img {
 
 button {
   border: none;
+  white-space: nowrap;
 }
 
 :root {

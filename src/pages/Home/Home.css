@@ -100,7 +100,7 @@ section {
         > picture {
             > img {
                 scale: 1.5;
-                width: clamp(0px, 90%, 800px);
+                width: clamp(0px, 100%, 800px);
                 transform: translate(60px, -20px);
                 @media (max-width: 1024px) {
                     transform: translate(50px, -30px)
@@ -113,12 +113,12 @@ section {
             text-align: center;
             padding: 50px 0;
             > p {
-                margin: 10px 0;
+                margin: 10px 0 30px;
                 font-size: 1.1em;
             }
             > a {
                 background: no-repeat center / cover url("https://s1.pearlcdn.com/KR/contents_event/floating/202406/main_new_char/main_btn_hover.png");
-                padding: 1em 5em;
+                padding: 1.2em 7em;
                 color: white;
             }
         }
