@@ -124,3 +124,79 @@ section {
         }
     }
 }
+
+
+#classlist-section{
+    background: no-repeat center / cover url("https://s1.pearlcdn.com/KR/contents/img/portal/main/main_character_class_bg.jpg");
+    > .section-wrap {
+        height: 900px;
+        position: relative;
+        > .class-icon {
+            position: absolute;
+            opacity: .1;
+            top: 20%;
+            left: 30%;
+            scale: 1.2;
+        }
+        > .class-charactor {
+            height: 100%;
+            position: absolute;
+            > img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        > .class-profile {
+            position: absolute;
+            top: 20%;
+            left: 30px;
+            > h2{
+                color: white;
+                font-size: 3.5em;
+            }
+            > p {
+                color: hsl(0, 0%, 70%);
+                margin: 20px 0 30px;
+            }
+            > a {
+                color: #796852;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 50px;
+                    height: 10px;
+                    position: absolute;
+                    right: -50%;
+                    top: 0;
+                    border-bottom: 1px solid #796852;
+                    border-right: 1px solid #796852;
+                    transform: skew(60deg);
+                }
+            }
+            > button {
+                background-color:var(--color-light-gold);
+                display: block;
+                margin-top: 80px;
+                font-size: 1.2em;
+                padding: .9em 5.5em;
+                border-radius: 3px;
+            }
+        }
+        > .class-list {
+            width: 95%;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            > div {
+                background-color: gray;
+                width: 82px;
+                aspect-ratio: 1;
+                background: no-repeat url("https://s1.pearlcdn.com/KR/contents/img/portal/main/spr_main_characters_icn.jpg?v=1");
+                
+            }
+        }
+    }
+}

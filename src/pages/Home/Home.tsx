@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ClassList from "./components/ClassList";
 import { homeNews } from "./mock";
 import "./Home.css";
 
@@ -28,8 +29,6 @@ function Home() {
           </article>
         ))}
       </section>
-      {/* //////////////////////////////////////////// */}
-      {/* 작업중 */}
       <section id="new-class-section">
         <div className="section-wrap">
           <picture>
@@ -54,6 +53,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <ClassList />
     </>
   );
 }
