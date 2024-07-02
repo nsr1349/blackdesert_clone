@@ -149,7 +149,7 @@ section {
         > .class-profile {
             position: absolute;
             top: 20%;
-            left: 30px;
+            left: 20px;
             > h2{
                 color: white;
                 font-size: 3.5em;
@@ -183,19 +183,18 @@ section {
             }
         }
         > .class-list {
-            width: 95%;
+            width: 100%;
             flex-wrap: wrap;
             gap: 10px;
             position: absolute;
             top: 65%;
             left: 50%;
             transform: translateX(-50%);
-            > div {
-                background-color: gray;
+            > li {
                 width: 82px;
                 aspect-ratio: 1;
                 background: no-repeat url("https://s1.pearlcdn.com/KR/contents/img/portal/main/spr_main_characters_icn.jpg?v=1");
-                
+
             }
         }
     }
