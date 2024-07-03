@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ClassList from "./components/ClassList";
-import { homeNews } from "./mock";
+import { homeNews } from "./mocks";
 import "./Home.css";
 
 function Home() {

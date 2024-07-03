@@ -141,6 +141,7 @@ section {
         > .class-charactor {
             height: 100%;
             position: absolute;
+            right: 0;
             > img {
                 object-fit: cover;
                 height: 100%;
@@ -157,6 +158,7 @@ section {
             > p {
                 color: hsl(0, 0%, 70%);
                 margin: 20px 0 30px;
+                white-space: pre-line;
             }
             > a {
                 color: #796852;
@@ -190,11 +192,19 @@ section {
             top: 65%;
             left: 50%;
             transform: translateX(-50%);
-            > li {
+            > div {
                 width: 82px;
                 aspect-ratio: 1;
                 background: no-repeat url("https://s1.pearlcdn.com/KR/contents/img/portal/main/spr_main_characters_icn.jpg?v=1");
-
+                filter: grayscale(100%);
+                transition: all 0.3s;
+                border-radius: 5px;
+                border: 1px solid ;
+                &:hover {
+                    scale: 1.1;
+                    filter: grayscale(0%);
+                    border-color: var(--color-light-gold);
+                }
             }
         }
     }
