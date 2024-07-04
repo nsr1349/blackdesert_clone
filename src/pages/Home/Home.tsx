@@ -19,6 +19,7 @@ function Home() {
           <button>지금 시작하기</button>
         </div>
       </section>
+      {/* width 문제있음 */}
       <section id="news-section">
         {homeNews.map(({ id, image, title }) => (
           <article key={id}>
@@ -59,6 +60,59 @@ function Home() {
           alt=""
         />
       </div>
+      <section id="landing-section">
+        <div className="section-wrap">
+          <div className="landing-title">
+            <h3>고대의 진실을 찾아</h3>
+            <p>
+              대륙의 중심에서 기억을 잃은 한 모험가. <br /> 세계를 관통하는
+              비밀을 향한 긴 모험이 시작됩니다.
+            </p>
+          </div>
+          <div className="landing-first-box">
+            <div>
+              <h3>꿈꾸던 모험을 현실로</h3>
+              <p>
+                말과 함께 초원을 가로지르는 방랑자, 거대한 범선으로 섬과 육지를
+                오가는 대상인. <br /> 드넓은 세계를 유랑하며 나의 이야기를
+                만들어 가세요.
+              </p>
+              <button className="after-arrow">더보기</button>
+            </div>
+            <picture>
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_adventure_thumb.png"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div className="landing-second-box">
+            <picture className="flex-center">
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_battle_thumb.jpg?v=1"
+                className="landing-second-box-backgroundimg"
+                alt=""
+              />
+            </picture>
+            <img
+              src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_battle_character.png?v=2"
+              className="landing-second-box-charactorimg"
+              alt=""
+            />
+            <div className="landing-second-box-text">
+              <h3>끊이지 않는 전투와 전쟁</h3>
+              <p>
+                세계를 위협하는 세력을 저지하고, 때로는 다른 모험가와 승부를
+                겨루는 짜릿한 전투들.
+                <br />
+                포화가 가득한 전쟁을 승리로 이끌어 길드의 명성을 드높이고 막대한
+                부를 쟁취할 수도 있습니다.
+              </p>
+              <button className="after-arrow">더보기</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <ClassList />
     </>
   );

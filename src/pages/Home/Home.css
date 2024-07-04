@@ -1,4 +1,5 @@
 section {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,8 +11,21 @@ section {
     height: 100%;
 }
 
+.after-arrow {
+    position: relative;
+    &::after {
+        content: '';
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        border-bottom: 1px solid ;
+        border-right: 1px solid ;
+        transform: skew(50deg);
+    }
+}
+
+
 #video-section {
-    width: 100%;
     min-height: 460px;
     position: relative;
     overflow: hidden;
@@ -89,7 +103,6 @@ section {
 
 #new-class-section{
     background: no-repeat center / auto 100% url("https://s1.pearlcdn.com/KR/contents_event/floating/202406/main_new_char/main_bg_2560.jpg");
-    width: 100%;
     height: 700px;
     @media (max-width: 1024px) {
         height: 550px;
@@ -135,8 +148,75 @@ section {
     }
 }
 
+#landing-section {
+    width: 100%;
+    background: no-repeat top / cover url("https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_bg.jpg");
+    & .section-wrap {
+        min-height: 2000px;
+        & h3 {
+            font-size: 3em;
+            color: white;
+        }
+        p {
+            margin: 2em 0;
+            font-size: .9em;
+            color: gray;
+        }
+        & .landing-title {
+            text-align: center;
+            margin: 9em 0 13em;
+            h3 {
+                font-size: 3.5em;
+                color: brown;
+            }
+        }
+        & button {
+            background-color: hsl(0 0 0 / 0);
+            border: 1px solid hsla(45, 2%, 34%, 0.603);
+            color: white;
+            font-weight: 300;
+            padding: .5em 7em .5em 2em;
+            &::after {
+                top: 25%;
+                right: 20%;
+                width: 60px;
+            }
+        }
+        & .landing-first-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2em;
 
+        }
+        & .landing-second-box {
+            padding: 0 2em;
+            margin-top: 200px;
+            position: relative;
+            & picture {
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                & .landing-second-box-backgroundimg {
+                    width: 100%;
+                    transition: all 1s;
+                    scale: 1;
+                    transform: translateY(-130px);
+                    filter: grayscale(.4);
+                }
+            }
+            & .landing-second-box-charactorimg {
+                position: absolute;
+                bottom: 0;
+            }
+            & .landing-second-box-text {
+                position: absolute;
+                bottom: -150px;
+            }
+        }
+    }
 
+} 
 
 
 #classlist-section{
@@ -146,15 +226,15 @@ section {
         position: relative;
         > .class-icon {
             position: absolute;
-            opacity: .1;
-            top: 20%;
+            opacity: .03;
+            top: 15%;
             left: 30%;
-            scale: 1.2;
         }
         > .class-charactor {
-            height: 100%;
+            height: 110%;
             position: absolute;
-            right: 0;
+            right: -3%;
+            top: -3%;
             > img {
                 object-fit: cover;
                 height: 100%;
@@ -170,22 +250,15 @@ section {
             }
             > p {
                 color: hsl(0, 0%, 70%);
-                margin: 20px 0 30px;
+                margin: 20px 0 40px;
                 white-space: pre-line;
             }
             > a {
                 color: #796852;
-                position: relative;
+                font-size: .9em;
                 &::after {
-                    content: '';
-                    width: 50px;
-                    height: 10px;
-                    position: absolute;
-                    right: -50%;
+                    right: -60%;
                     top: 0;
-                    border-bottom: 1px solid #796852;
-                    border-right: 1px solid #796852;
-                    transform: skew(60deg);
                 }
             }
             > button {

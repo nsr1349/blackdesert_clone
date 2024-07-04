@@ -18,7 +18,9 @@ function ClassList() {
           <div className="class-profile">
             <h2>{classList[selectClassIdx].name}</h2>
             <p>{classList[selectClassIdx].content}</p>
-            <Link to={"/"}>자세히 알아보기</Link>
+            <Link to={"/"} className="after-arrow">
+              자세히 알아보기
+            </Link>
             <button>지금 시작하기</button>
           </div>
           <div className="class-list flex-center">
