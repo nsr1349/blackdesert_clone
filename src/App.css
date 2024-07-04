@@ -92,6 +92,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 1rem;
+  border-radius: 5px;
 }
 
 button {

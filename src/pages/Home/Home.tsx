@@ -93,12 +93,12 @@ function Home() {
                 className="landing-second-box-backgroundimg"
                 alt=""
               />
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_battle_character.png?v=2"
+                className="landing-second-box-charactorimg"
+                alt=""
+              />
             </picture>
-            <img
-              src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_battle_character.png?v=2"
-              className="landing-second-box-charactorimg"
-              alt=""
-            />
             <div className="landing-second-box-text">
               <h3>끊이지 않는 전투와 전쟁</h3>
               <p>
@@ -111,6 +111,45 @@ function Home() {
               <button className="after-arrow">더보기</button>
             </div>
           </div>
+          <div className="landing-third-box">
+            <picture>
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_life_thumb_1.jpg"
+                alt=""
+              />
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_life_thumb_1_char.png"
+                alt=""
+              />
+              <img
+                src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_life_thumb_1_pet.png"
+                alt=""
+              />
+            </picture>
+            <img
+              src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_life_thumb_2.jpg"
+              alt=""
+            />
+            <img
+              src="https://s1.pearlcdn.com/KR/contents/img/portal/main/main_feature_life_thumb_3.jpg"
+              alt=""
+            />
+            <div className="landing-third-box-text">
+              <h3>
+                자유로운 생활, <br />또 다른 일상
+              </h3>
+              <p>
+                내 마음대로 꾸민 공간에서 여가를 즐기세요.
+                <br />
+                때로는 모닥불 근처에 둘러앉아 풀벌레 소리를 듣기도 하고,
+                <br />
+                친구들과 함께 바다 낚시를 떠나거나 연금술사가 되어보세요.
+              </p>
+              <button className="after-arrow">더보기</button>
+            </div>
+          </div>
+
+          {/* <div className="test"></div> */}
         </div>
       </section>
       <ClassList />
