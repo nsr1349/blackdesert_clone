@@ -53,6 +53,12 @@ function Home() {
           </div>
         </div>
       </section>
+      <div className="main-banner">
+        <img
+          src="https://s1.pearlcdn.com/KR/Upload/BANNER/MAIN/bannerImage_20240604140351koKR.jpg"
+          alt=""
+        />
+      </div>
       <ClassList />
     </>
   );
