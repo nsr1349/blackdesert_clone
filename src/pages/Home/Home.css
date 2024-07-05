@@ -262,10 +262,17 @@ section {
 
 } 
 
-.test {
-    background-color: red;
-    width: 100%;
-    aspect-ratio: 3/1;
+#world-section{
+    background: no-repeat 50% 50% / 140% url("https://s1.pearlcdn.com/KR/contents/img/portal/main/main_world_bg.jpg");
+    height: 750px;
+    & div {
+        color: white;
+        text-align: center;
+        & h3 {
+            font-size: 3.5em;
+            margin-bottom: .8em;
+        }
+    }
 }
 
 #classlist-section{
